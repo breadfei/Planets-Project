@@ -31,9 +31,10 @@ function updatePlanetDisplay(){
         document.getElementById("planetType").innerHTML="Outer planet";
     }
     document.getElementById("planetDisplay").style.backgroundColor=planets[index].color;
-    let diameter = planets[index].diameter / 100
+    let diameter = planets[index].diameter / 100 + "px"
     console.log(diameter)
-    document.getElementById("planetDisplay").width = diameter;
+    document.getElementById("planetDisplay").style.width = diameter;
+    document.getElementById("planetDisplay").style.height = diameter;
 
     if (index <= 0){
         document.getElementById("backIndex").disabled = true;
